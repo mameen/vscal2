@@ -1,9 +1,7 @@
 # Shows Date/Time on VSCode statusbar and Monthly Calendar upon click
 
-Displays a clock & date information in the status bar of VSCode. 95% of the functionality comes from the awesome [upstream](https://github.com/rid9/DateTime.git),
-and all I did here is just showing monthly calendar upon click or shortcut key with some highlighting for current day.
-Beauty of this is you can quickly see a calendar without leaving VSCode or moving your fingers off keyboard (Ctrl+Cmd+C & Cmd-W on Mac).
-Now works on Windows the same way as Mac/Linux! Enjoy!!
+Displays a clock & date information in the status bar of VSCode. 95% of the functionality comes from the awesome [rid9/DateTime](https://github.com/rid9/DateTime.git), and [miyamotoh/vscal2]([git@github.com:miyamotoh/vscal2.git](https://github.com/miyamotoh/vscal2.git))
+and all I did here is just merge both repos, and make sure it builds and works
 
 ![Screenshot](./images/screenshot.png)
 
@@ -11,36 +9,36 @@ Now works on Windows the same way as Mac/Linux! Enjoy!!
 
 ## Configuration Options
 
-|Option                        |Default|Description                                        |Example       |
-|------------------------------|-------|---------------------------------------------------|--------------|
-|`dateTime.showOnStartup`      |`true` |Show date & time on startup.                       |              |
-|`dateTime.use24HourClock`     |`true` |Use a 24 hour clock.                               |**18**:43     |
-|`dateTime.showAMPM`           |`false`|Show AM/PM.                                        |7:43 **PM**   |
-|`dateTime.showDayOfWeek`      |`false`|Show the day of the week.                          |**Fri** 1 Jul |
-|`dateTime.showDayOfMonth`     |`false`|Show the day of the month.                         |Fri **1** Jul |
-|`dateTime.showMonth`          |`false`|Show the month.                                    |Fri 1 **Jul** |
-|`dateTime.showHours`          |`true` |Show hours.                                        |**18**:43     |
-|`dateTime.showMinutes`        |`true` |Show minutes.                                      |18:**43**     |
-|`dateTime.showSeconds`        |`false`|Show seconds.                                      |18:43:**12**  |
-|`dateTime.padDays`            |`false`|Pad the day of the month with a leading 0.         |Fri **01** Jul|
-|`dateTime.padHours`           |`true` |Pad hours with a leading 0.                        |**09**:43     |
-|`dateTime.padMinutes`         |`true` |Pad minutes with a leading 0.                      |18:**03**     |
-|`dateTime.padSeconds`         |`true` |Pad seconds with a leading 0.                      |18:43:**04**  |
-|`dateTime.locale`             |`null` |Date & time locale.                                |es-us         |
-|`dateTime.flashTimeSeparators`|`false`|Flash the time separators.                         |              |
-|`dateTime.timeSeparator`      |`:`    |Time separator character.                          |              |
-|`dateTime.timeSeparatorOff`   |` `    |Flashing time separator character.                 |              |
-|`dateTime.customFormat`       |`null` |Use a custom date & time format.                   |              |
-|`dateTime.clipboardFormat`    |`null` |Use a custom date & time format when copying.      |              |
-|`dateTime.fractionalPrecision`|`null` |Update interval divisor for fractional seconds.    |              |
-|`dateTime.statusBarAlignment` |`right`|Status bar alignment, left or right.               |left          |
-|`dateTime.statusBarPriority`  |`null` |Status bar priority. Higher means more to the left.|10            |
+|Option                         |Default|Description                                        |Example       |
+|-------------------------------|-------|---------------------------------------------------|--------------|
+|`dateTime.showOnStartup`       |`true` |Show date & time on startup.                       |              |
+|`dateTime.use24HourClock`      |`true` |Use a 24 hour clock.                               |**18**:43     |
+|`dateTime.showAMPM`            |`false`|Show AM/PM.                                        |7:43 **PM**   |
+|`dateTime.showDayOfWeek`       |`false`|Show the day of the week.                          |**Fri** 1 Jul |
+|`dateTime.showDayOfMonth`      |`false`|Show the day of the month.                         |Fri **1** Jul |
+|`dateTime.showMonth`           |`false`|Show the month.                                    |Fri 1 **Jul** |
+|`dateTime.showHours`           |`true` |Show hours.                                        |**18**:43     |
+|`dateTime.showMinutes`         |`true` |Show minutes.                                      |18:**43**     |
+|`dateTime.showSeconds`         |`false`|Show seconds.                                      |18:43:**12**  |
+|`dateTime.padDays`             |`false`|Pad the day of the month with a leading 0.         |Fri **01** Jul|
+|`dateTime.padHours`            |`true` |Pad hours with a leading 0.                        |**09**:43     |
+|`dateTime.padMinutes`          |`true` |Pad minutes with a leading 0.                      |18:**03**     |
+|`dateTime.padSeconds`          |`true` |Pad seconds with a leading 0.                      |18:43:**04**  |
+|`dateTime.locale`              |`null` |Date & time locale.                                |es-us         |
+|`dateTime.flashTimeSeparators` |`false`|Flash the time separators.                         |              |
+|`dateTime.timeSeparator`       |`:`    |Time separator character.                          |              |
+|`dateTime.timeSeparatorOff`    |` `    |Flashing time separator character.                 |              |
+|`dateTime.customFormat`        |`null` |Use a custom date & time format.                   |              |
+|`dateTime.clipboardFormat`     |`null` |Use a custom date & time format when copying.      |              |
+|`dateTime.fractionalPrecision` |`null` |Update interval divisor for fractional seconds.    |              |
+|`dateTime.statusBarAlignment`  |`right`|Status bar alignment, left or right.               |left          |
+|`dateTime.statusBarPriority`   |`null` |Status bar priority. Higher means more to the left.|10            |
 |`dateTime.monthsBefore`        |`1`    |How many prior months to show in calendar view.    |2             |
 |`dateTime.monthsAfter`         |`1`    |How many following months to show in calendar view.|10            |
 |`dateTime.monthsPerRow`        |`3`    |How many months to show horizontally.              |4             |
 |`dateTime.extraHorizontalSpace`|`1`    |Padding between columns in calendar view.          |              |
 |`dateTime.extraVerticalSpace`  |`1`    |Padding between rows in calendar view.             |              |
-|`dateTime.weekStartsOn` .      |`0`    |First day of week (0=Sun, 1=Mon) in calendar view. |              |
+|`dateTime.weekStartsOn`        |`0`    |First day of week (0=Sun, 1=Mon) in calendar view. |              |
 
 ### Example usage
 
@@ -120,6 +118,8 @@ Custom date & time formats can be specified using the [Moment.js syntax](http://
 
 ## Release Notes
 
+### v1.4.4
+Pull and merge latest from both `rid9/DateTime` and `miyamotoh/vscal2`
 ### v1.4.3
 Pull and merge latest from rid9
 ### v1.4.1
