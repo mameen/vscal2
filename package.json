@@ -7,7 +7,7 @@
         "type": "git",
         "url": "https://github.com/mameen/vsdtc.git"
     },
-    "bugs": "https://github.com/mameen/dtc/issues",
+    "bugs": "https://github.com/mameen/vsdtc/issues",
     "icon": "images/icon.png",
     "publisher": "mameen",
     "engines": {
